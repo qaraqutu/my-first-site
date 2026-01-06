@@ -1,0 +1,68 @@
+<html>
+<head>
+  <style>
+    /* səhifəni ortalamaq */
+    body{
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;  /* soldan-sağa ortala */
+      align-items: center;      /* yuxarı-aşağı ortala */
+      font-family: Arial, sans-serif;
+    }
+
+    /* form qutusu */
+    .box{
+      width: 350px;
+      border: 2px solid #000;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    input, select, button{
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      box-sizing: border-box;
+    }
+
+    /* checkbox tam 100% olmasın deyə */
+    .row{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .row input{ width: auto; margin: 0; }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <form method="post">
+      Adınızı qeyd edin:
+      <input type="text" name="ad">
+
+      Soyadınızı qeyd edin:
+      <input type="text" name="soyad">
+
+      Yaşadığınız ölkəni qeyd edin:
+      <input type="text" name="olke">
+
+      Cinsiniz:
+      <select name="cins">
+        <option value=""></option>
+        <option value="Kişi">Kişi</option>
+        <option value="Qadın">Qadın</option>
+      </select>
+
+      <div class="row">
+        <input type="checkbox" id="raziliq" name="raziliq" value="yes">
+        <label for="raziliq">Razısan?</label>
+      </div>
+
+      <button type="submit">Qeydiyyat</button>
+    </form>
+  </div>
+</body>
+</html>
